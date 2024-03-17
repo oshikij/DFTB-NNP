@@ -1,0 +1,30 @@
+Geometry = GenFormat { 
+    <<< "geo_end.gen" 
+} 
+ 
+Driver = ConjugateGradient{ 
+   MaxForceComponent = 1.00E-008 
+   MaxSteps = 1000 
+   } 
+Hamiltonian = DFTB{ 
+   MaxAngularMomentum = { 
+      H = "s" 
+      O = "p" 
+   } 
+   SCC = Yes 
+   SCCTolerance = 1.00E-010 
+   SlaterKosterFiles = Type2FileNames{ 
+      Prefix = ../params/PTBP_complete_set/ 
+      Separator = "-" 
+      Suffix = ".skf" 
+      } 
+   } 
+Options { 
+   WriteResultsTag = Yes 
+} 
+ParserOptions { 
+   IgnoreUnprocessedNodes = Yes  
+} 
+Analysis { 
+   CalculateForces = Yes  
+} 

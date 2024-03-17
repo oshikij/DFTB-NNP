@@ -1,0 +1,13 @@
+name: dftb_env01
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - dftbplus=24.1
+  - dftbplus-tools=24.1
+  - dftbplus-python=24.1
+  - ase=3.22.1
+  - mamba=1.5.7
+  - pip=23.3.1
+  - ipykernel=6.29.3
+  - ipython=8.22.2
